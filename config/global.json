@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "Brand": {
+            "applicationId": "rHbqdGAlsbn31Z7KdIHhQ2PruGDZksLyiLZcmzfj", 
+            "masterKey": "yxXj3rpDwcDHdqRO3ORRJefwoIrUWIiU55QySqG6"
+        }, 
+        "_default": {
+            "link": "Brand"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.2.18"
+    }
+}
