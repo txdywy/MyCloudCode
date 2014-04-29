@@ -52,18 +52,22 @@
       }
     });
 	
-    var yhd_data = Parse.Object.extend("yhd_data");
-    var query = new Parse.Query(yhd_data);
-    query.equalTo("BrandName", "狮王");
-    query.first({
-      success: function(object) {
-    	// Successfully retrieved the object.
-      },
-      error: function(error) {
-    	alert("Error: " + error.code + " " + error.message);
-      }
-    });
-	alert("haha"+query.get("BrandName"))
+	var GameScore = Parse.Object.extend("yhd_data");
+	var query = new Parse.Query(GameScore);
+	query.startsWith("brandName", "高");
+	query.find({
+	  success: function(results) {
+		alert("Successfully retrieved " + results.length + " scores.");
+		// Do something with the returned Parse.Object values
+		for (var i = 0; i < results.length; i++) { 
+		  var object = results[i];
+		  alert(object.id + ' - ' + object.get('brandName'));
+		}
+	  },
+	  error: function(error) {
+		alert("Error: " + error.code + " " + error.message);
+	  }
+	});
   </script>
 </body>
 
