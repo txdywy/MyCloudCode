@@ -26,13 +26,14 @@
 	
 	<div class="choice_list"> 
 	<h1> What would you'd like to eat? </h1>
-
-	<div data-role="fieldcontain">
-		<label for="search">Search Input:</label>
-		<input type="search" name="password" id="search" value="" />
+	<div data-role="main" class="ui-content">
+    <form method="post" action="choose_town.html">
+      <div class="ui-field-contain">
+        <input type="search" name="search" id="search" placeholder="Search for content...">
+      </div>
+      <input type="submit" value="Submit" data-icon="check" data-iconpos="right">
+    </form> 
 	</div>
-	
-	
 	<ul data-role="listview" data-inset="true" >
 	<li><a href="choose_town.html" data-transition="slidedown"> <img src="http://www.factslides.com/imgs/s-Apple.png"/> <h3> Apple</h3></a></li>
 	<li><a href="choose_town.html" data-transition="slidedown"> <img src="http://fxcast.com/i/android.png"/> <h3> Android</h3></a></li>
