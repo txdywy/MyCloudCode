@@ -26,41 +26,26 @@
 <div data-role="page" id="home" data-theme="c">
 
     <div data-role="content">
-    
+
     <div id="branding">
         <h1>Restaurant Picker </h1>
     </div>
-    
-    <div class="choice_list"> 
-    <h1> What would you'd like to eat? </h1>
 
-    <div data-role="main" class="ui-content">
-        <form target="hidden_frame">
-        <input type="search" name="search" id="search_product" placeholder="Search for content...">
-        <input type="submit" value="Submit" data-icon="search" onclick="search_func()">
-        </form>
-        <iframe name="hidden_frame" id="hidden_frame" style="display:none"></iframe>
-    </div>
+    <form class="login-form" id="login-form" data-ajax="false" action="search.html">
+      <h2>Log In</h2>
+      <div class="error" style="display:none"></div>
+      <input type="text" id="login-username" placeholder="Username" />
+      <input type="password" id="login-password" placeholder="Password" />
+      <button data-icon="check" onclick="return logInBrand()">Log In</button>
+    </form>
+    <form class="signup-form" id="signup-form" data-ajax="false" action="search.html">
+      <h2>Sign Up</h2>
+      <div class="error" style="display:none"></div>
+      <input type="text" id="signup-username" placeholder="Username" />
+      <input type="password" id="signup-password" placeholder="Create a Password" />
+      <button data-icon="grid" onclick="return signUpBrand()">Sign Up</button>
+    </form>
 
-    <ul data-role="listview" data-inset="true" >
-    <li><a href="http://www.factslides.com/imgs/s-Apple.png" id="search_result_a" data-transition="slidedown"> <img id="search_result_img" src=""/> <h3 id="search_result_h3">搜索結果</h3></a></li>
-    </ul>
-
-
-    <ul data-role="listview" data-inset="true" >
-    <li><a href="choose_town.html" data-transition="slidedown"> <img src="http://www.factslides.com/imgs/s-Apple.png"/> <h3> Apple</h3></a></li>
-    <li><a href="choose_town.html" data-transition="slidedown"> <img src="http://fxcast.com/i/android.png"/> <h3> Android</h3></a></li>
-    <li><a href="choose_town.html" data-transition="slidedown"> <img src="sushis.jpg"/> <h3> Some Sushis</h3></a></li>
-    <li><a href="choose_town.html"  data-transition="slidedown"> <img src="pizza.jpg"/> <h3> A Pizza </h3></a></li>
-    <li><a href="choose_town.html"  data-transition="slidedown"> <img src="kebap.jpg"/> <h3> A Kebap</h3></a></li>
-    <li><a href="choose_town.html"  data-transition="slidedown"> <img src="burger.jpg"/> <h3> A Burger</h3></a></li>
-    <li><a href="choose_town.html"  data-transition="slidedown"> <img src="nems.jpg"/> <h3> Some Nems </h3></a></li>
-    <li><a href="choose_town.html"  data-transition="slidedown"> <img src="tradi.jpg"/> <h3> Something more traditional</h3></a></li>    
-    </ul>    
-    
-    </div>
-    </div>
-
-</div><!-- /page -->
+  </div>
+</div>
 </body>
-</html>

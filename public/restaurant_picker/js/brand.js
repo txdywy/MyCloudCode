@@ -40,3 +40,52 @@ var search_func = function(){
     }
   });
 };
+
+var logInBrand = function(e) {
+  var self = this;
+  var username = this.$("#login-username").val();
+  var password = this.$("#login-password").val();
+  
+  Parse.User.logIn(username, password, {
+    success: function(user) {
+      //self.$("#login-form").submit();
+      //alert("success");
+      self.$("#login-form").submit();
+    },
+
+    error: function(user, error) {
+      self.$(".login-form .error").html("Invalid username or password. Please try again.").show();
+      //alert('Invalid user or password');
+    }
+  });
+  //this.$(".login-form button").attr("disabled", "disabled");
+
+  return false;
+};
+
+var signUpBrand = function(e) {
+  var self = this;
+  var username = this.$("#signup-username").val();
+  var password = this.$("#signup-password").val();
+  
+  Parse.User.signUp(username, password, { ACL: new Parse.ACL() }, {
+    success: function(user) {
+      //delete self;
+      self.$("#login-form").submit();
+    },
+
+    error: function(user, error) {
+      self.$(".signup-form .error").html(error.message).show();
+      //this.$(".signup-form button").removeAttr("disabled");
+    }
+  });
+
+  //this.$(".signup-form button").attr("disabled", "disabled");
+
+  return false;
+};
+
+var logOutBrand = function(e) {
+  Parse.User.logOut();
+  delete this;
+};
