@@ -17,13 +17,30 @@
     <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.18.min.js"></script>
     <script src="js/brand.js"></script>
     <script type="text/javascript">
-
+        $("#img_user_info_h3").text(Parse.User.current().get("username"))
     </script>
 
 </head> 
 
 <body> 
-<div data-role="page" id="home" data-theme="c">
+<div data-role="page" id="home" data-theme="c">  
+    <div data-role="header" data-position="inline"> 
+        <img id="img_user_info_pic" src="http://icons.iconarchive.com/icons/mattahan/ultrabuuf/256/Comics-Captain-America-icon.png"/>
+        <a id="userinfo" href="index.html" data-icon="delete" class="ui-btn-right" onclick="logOutBrand()">Log out</a>
+        <script type="text/javascript">
+            $("#userinfo").text("["+Parse.User.current().get("username")+"] Log out");
+            var user_pic = ["http://icons.iconarchive.com/icons/mattahan/ultrabuuf/256/Comics-Captain-America-icon.png",
+                            "http://files.gamebanana.com/img/ico/sprays/iron_man_3.png",
+                            "http://files.gamebanana.com/img/ico/sprays/sin_ttulo-1psdpng.gif",
+                            "http://icons.iconarchive.com/icons/mattahan/ultrabuuf/256/Comics-Batman-icon.png",
+                            "http://i587.photobucket.com/albums/ss315/phatinium/Miscellaneous/spiderman.png"
+                           ];
+
+
+            $("#img_user_info_pic").attr("src",user_pic[Math.floor((Math.random() * 10)+1)%5]);
+        </script> 
+
+    </div> 
 
     <div data-role="content">
     

@@ -59,6 +59,7 @@ box-sizing: border-box;
 .ui-header.ui-bar-a{
 background:url(images/header_bg.png);
 }
+/*
 .ui-header .ui-title {
 text-indent:-9999px;
 font-size:0px;
@@ -66,7 +67,7 @@ background:url(images/header_logo.png) no-repeat 69% 5px ;
 height:33px;
 padding:5px 0 5px 50px;
 margin:0px;
-}
+}*/
 
 .ui-header  .ui-btn-up-a  {
 background:rgba(255, 255, 255, 0.1);

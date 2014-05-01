@@ -87,5 +87,4 @@ var signUpBrand = function(e) {
 
 var logOutBrand = function(e) {
   Parse.User.logOut();
-  delete this;
 };
