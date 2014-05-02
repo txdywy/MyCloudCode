@@ -20,10 +20,20 @@ var search_func = function(){
         var object = results[i];
         alert(object.id + ' - ' + object.get('brandName'));
       }*/
+      var user_pic = ["http://icons.iconarchive.com/icons/mattahan/ultrabuuf/256/Comics-Captain-America-icon.png",
+                      "http://files.gamebanana.com/img/ico/sprays/iron_man_3.png",
+                      "http://files.gamebanana.com/img/ico/sprays/sin_ttulo-1psdpng.gif",
+                      "http://icons.iconarchive.com/icons/mattahan/ultrabuuf/256/Comics-Batman-icon.png",
+                      "http://i587.photobucket.com/albums/ss315/phatinium/Miscellaneous/spiderman.png",
+                      "http://files.gamebanana.com/img/ico/sprays/flash_2.png"
+                     ];
+
+
+      default_img_url = user_pic[Math.floor((Math.random() * 10)+1)%6];
       if (results.length>0){
           img_url = results[0].get('newBrandLogoUrl');
           if (img_url===null){
-            img_url="http://icons.iconarchive.com/icons/mattahan/ultrabuuf/256/Comics-Captain-America-icon.png";
+            img_url=default_img_url;
           }
           $("#search_result_img").attr("src",img_url);
           $("#popupSearchResultImg").attr("src",img_url);
@@ -31,8 +41,8 @@ var search_func = function(){
           $("#search_result_h3").text(results[0].get('brandName')+'\n'+results[0].get('companyName')+'\n'+results[0].get('provinceCnName'));
       }
       else{
-          $("#search_result_img").attr("src","http://files.gamebanana.com/img/ico/sprays/flash_2.png");
-          $("#popupSearchResultImg").attr("src","http://files.gamebanana.com/img/ico/sprays/flash_2.png");
+          $("#search_result_img").attr("src",default_img_url);
+          $("#popupSearchResultImg").attr("src",default_img_url);
           $("#search_result_h3").text("查询不到");
           //alert("查询不到");
       }
