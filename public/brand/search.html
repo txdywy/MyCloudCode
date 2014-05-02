@@ -61,8 +61,12 @@
     </div>
 
     <ul data-role="listview" data-inset="true" >
-    <li><a href="http://www.factslides.com/imgs/s-Apple.png" id="search_result_a" data-transition="slidedown"> <img id="search_result_img" src=""/> <h3 id="search_result_h3">搜索結果</h3></a></li>
+    <li><a href="#popupSearchResult" data-rel="popup" data-position-to="window" data-transition="fade" id="search_result_a" data-transition="slidedown"> <img id="search_result_img" src=""/> <h3 id="search_result_h3">搜索結果</h3></a></li>
     </ul>
+
+    <div data-role="popup" id="popupSearchResult" data-overlay-theme="b" data-theme="b" data-corners="false">
+        <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img id="popupSearchResultImg" class="popphoto" src="http://icons.iconarchive.com/icons/mattahan/ultrabuuf/256/Comics-Captain-America-icon.png" style="max-height:512px;" alt="Paris, France">
+    </div>
 
 
     <ul data-role="listview" data-inset="true" >

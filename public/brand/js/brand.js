@@ -23,14 +23,16 @@ var search_func = function(){
       if (results.length>0){
           img_url = results[0].get('newBrandLogoUrl');
           if (img_url===null){
-            img_url="http://www.factslides.com/imgs/s-Apple.png";
+            img_url="http://icons.iconarchive.com/icons/mattahan/ultrabuuf/256/Comics-Captain-America-icon.png";
           }
           $("#search_result_img").attr("src",img_url);
-          $("#search_result_a").attr("href",img_url);
+          $("#popupSearchResultImg").attr("src",img_url);
+          //$("#search_result_a").attr("href",img_url);
           $("#search_result_h3").text(results[0].get('brandName')+'\n'+results[0].get('companyName')+'\n'+results[0].get('provinceCnName'));
       }
       else{
-          $("#search_result_img").attr("src","http://www.factslides.com/imgs/s-Apple.png");
+          $("#search_result_img").attr("src","http://icons.iconarchive.com/icons/mattahan/ultrabuuf/256/Comics-Captain-America-icon.png");
+          $("#popupSearchResultImg").attr("src","http://icons.iconarchive.com/icons/mattahan/ultrabuuf/256/Comics-Captain-America-icon.png");
           $("#search_result_h3").text("查询不到");
           alert("查询不到");
       }
