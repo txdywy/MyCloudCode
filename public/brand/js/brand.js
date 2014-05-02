@@ -65,7 +65,7 @@ var logInBrand = function(e) {
     }
   });
   //this.$(".login-form button").attr("disabled", "disabled");
-
+  self.$.mobile.loading( "hide" );
   return false;
 };
 
@@ -89,7 +89,7 @@ var signUpBrand = function(e) {
   });
 
   //this.$(".signup-form button").attr("disabled", "disabled");
-
+  self.$.mobile.loading( "hide" );
   return false;
 };
 
