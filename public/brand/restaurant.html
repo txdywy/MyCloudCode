@@ -70,11 +70,11 @@
 
 	<script type="text/javascript">
 
-	$( '#restau' ).live( 'pageinit',function(event){
+	$( '#restau' ).on( 'pageinit',function(event){
 		var SelectedOptionClass = $('option:selected').attr('class');
 		$('div.ui-select').addClass(SelectedOptionClass);
 		
-		$('#note_utilisateur').live('change', function(){	 
+		$('#note_utilisateur').on('change', function(){	 
 			$('div.ui-select').removeClass(SelectedOptionClass);
 			
 			SelectedOptionClass = $('option:selected').attr('class');
