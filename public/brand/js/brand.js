@@ -31,8 +31,8 @@ var search_func = function(){
           $("#search_result_h3").text(results[0].get('brandName')+'\n'+results[0].get('companyName')+'\n'+results[0].get('provinceCnName'));
       }
       else{
-          $("#search_result_img").attr("src","http://icons.iconarchive.com/icons/mattahan/ultrabuuf/256/Comics-Captain-America-icon.png");
-          $("#popupSearchResultImg").attr("src","http://icons.iconarchive.com/icons/mattahan/ultrabuuf/256/Comics-Captain-America-icon.png");
+          $("#search_result_img").attr("src","http://files.gamebanana.com/img/ico/sprays/flash_2.png");
+          $("#popupSearchResultImg").attr("src","http://files.gamebanana.com/img/ico/sprays/flash_2.png");
           $("#search_result_h3").text("查询不到");
           alert("查询不到");
       }
