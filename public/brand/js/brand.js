@@ -55,10 +55,12 @@ var logInBrand = function(e) {
       //self.$("#login-form").submit();
       //alert("success");
       self.$("#login-form").submit();
+      self.$.mobile.loading( "hide" );
     },
 
     error: function(user, error) {
       self.$(".login-form .error").html("Invalid username or password. Please try again.").show();
+      self.$.mobile.loading( "hide" );
       //alert('Invalid user or password');
     }
   });
@@ -76,10 +78,12 @@ var signUpBrand = function(e) {
     success: function(user) {
       //delete self;
       self.$("#login-form").submit();
+      self.$.mobile.loading( "hide" );
     },
 
     error: function(user, error) {
       self.$(".signup-form .error").html(error.message).show();
+      self.$.mobile.loading( "hide" );
       //this.$(".signup-form button").removeAttr("disabled");
     }
   });
