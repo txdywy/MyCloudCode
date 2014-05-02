@@ -34,10 +34,12 @@ var search_func = function(){
           $("#search_result_img").attr("src","http://files.gamebanana.com/img/ico/sprays/flash_2.png");
           $("#popupSearchResultImg").attr("src","http://files.gamebanana.com/img/ico/sprays/flash_2.png");
           $("#search_result_h3").text("查询不到");
-          alert("查询不到");
+          //alert("查询不到");
       }
+      $.mobile.loading( "hide" );
     },
     error: function(error) {
+      $.mobile.loading( "hide" );
       alert("Error: " + error.code + " " + error.message);
     }
   });
@@ -90,3 +92,22 @@ var signUpBrand = function(e) {
 var logOutBrand = function(e) {
   Parse.User.logOut();
 };
+
+$( document ).on( "click", ".show-page-loading-msg", function() {
+    var $this = $( this ),
+        theme = $this.jqmData( "theme" ) || $.mobile.loader.prototype.options.theme,
+        msgText = $this.jqmData( "msgtext" ) || $.mobile.loader.prototype.options.text,
+        textVisible = $this.jqmData( "textvisible" ) || $.mobile.loader.prototype.options.textVisible,
+        textonly = !!$this.jqmData( "textonly" );
+        html = $this.jqmData( "html" ) || "";
+    $.mobile.loading( "show", {
+            text: msgText,
+            textVisible: textVisible,
+            theme: theme,
+            textonly: textonly,
+            html: html
+    });
+})
+.on( "click", ".hide-page-loading-msg", function() {
+    $.mobile.loading( "hide" );
+});
