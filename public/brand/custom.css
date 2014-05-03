@@ -265,4 +265,23 @@ background-position: -27px -182px;
 background-position: -2px -182px;
 }
 
+/* BELOW added by Tuobin Wang*/
+
+#profile {
+	background-color:#32394A;
+	border-bottom: 1px solid #242A37;
+	overflow: hidden;
+	height: 58px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.profile_info {
+	position: relative;
+	left: 80px;
+	top:-69px;
+	font-size: 14px;
+	color: #C4CCDA;
+	text-shadow: 0 0px 0 black;
+}
+
 
