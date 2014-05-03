@@ -1,9 +1,17 @@
 /*** general styling */
+/* JQM 1.0.1
 .ui-page.ui-body-c{
 background:url(images/bg.png);
 box-shadow:  0px 0px 30px 5px rgba(107, 105, 105, 0.3) inset,
  0px 0px 0px 1px rgba(107, 105, 105, 0.4) inset;
 
+}
+*/
+
+.ui-body-c, .ui-overlay-c { 
+background:url(images/bg.png);
+box-shadow:  0px 0px 30px 5px rgba(107, 105, 105, 0.3) inset,
+ 0px 0px 0px 1px rgba(107, 105, 105, 0.4) inset;
 }
 
 .ui-icon.ui-icon-arrow-r {
@@ -59,6 +67,7 @@ box-sizing: border-box;
 .ui-header.ui-bar-a{
 background:url(images/header_bg.png);
 }
+
 /*
 .ui-header .ui-title {
 text-indent:-9999px;
