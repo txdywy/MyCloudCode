@@ -12,69 +12,74 @@
     <link rel="stylesheet" href="custom.css" />
     <script src="js/jquery-1.11.0.min.js"></script>
     <script src="js/jquery.mobile-1.4.2.min.js"></script>
+    <script id="panel-init">
+        $(function() {
+            $( "body>[data-role='panel']" ).panel().enhanceWithin();
+        });
+    </script>
 </head>
 <body>
+    <div id="user_home" data-role="page" data-add-back-btn="true">
 
+        <div data-role="header" data-position="fixed">
+            <h1>Home</h1>
+            <a href="#home_panel" data-icon="bars" data-iconpos="notext">Menu</a>
+            <a href="#add-form" data-icon="gear" data-iconpos="notext">Add</a>
+        </div><!-- /header -->
 
-
-<div id="home" data-role="page" data-add-back-btn="true">
-
-    <div data-role="header" data-position="fixed">
-        <h1>Home</h1>
-        <a href="#home_panel" data-icon="bars" data-iconpos="notext">Menu</a>
-        <a href="#add-form" data-icon="gear" data-iconpos="notext">Add</a>
-    </div><!-- /header -->
-
-    <div data-role="content" class="ui-content">
-        <form>
-            <input type="search" name="search-4" id="search_product" placeholder="Search for product or brand ..." value="">
-        </form>
-    </div>
-
-    <div data-role="content">
-
-        <div class="friend_list">
-            <h1> My activity feed</h1>
-            <ul data-role="listview" data-inset="true">
-                <li><a href="restaurant.html" data-transition="slide">
-                    <img src="restau01_mini.jpg"/>
-                    <h2><font color="blue">Irene Tan</font> liked your review for <u>Colgate winter mint</u>.</h2>
-                    <p>From Beijing 1 hr ago</p></a>
-                </li>
-                <li><a href="restaurant.html" data-transition="slide">
-                    <img src="restau02_mini.jpg"/>
-                    <h2><font color="blue">Jacob Wu</font> posted a question on <u>Aveda shampoo</u>:"What is the difference in dry vs. moisturizing?"</h2>
-                    <p>From Shanghai 3hr ago</p></a>
-                </li>
-                <li><a href="restaurant.html" data-transition="slide">
-                    <img src="restau03_mini.jpg"/>
-                    <h2><font color="blue">Lisa Fung</font> commented on your review for <u>Mark Millar BBQ set</u>.</h2>
-                    <p>From Shenzhen 11 hr ago</p></a>
-                </li>
-                <li><a href="restaurant.html" data-transition="slide">
-                    <img src="restau04_mini.jpg"/>
-                    <h2><font color="blue">Beibei</font> in Xi'an followed your question for <u>Burtlesbee lip wax</u>.</h2>
-                    <p>From Xi'an 20 hr ago</p></a>
-                </li>
-                <li><a href="restaurant.html" data-transition="slide">
-                    <img src="restau05_mini.jpg"/>
-                    <h2><font color="blue">Johnson Ho</font> commented on your question for <u>Kleenex tissue</u>.</h2>
-                    <p>From Tianjin 2 days ago</p></a>
-                </li>
-            </ul>
-
+        <div data-role="content" class="ui-content">
+            <form>
+                <input type="search" name="search-4" id="search_product" placeholder="Search for product or brand ..." value="">
+            </form>
         </div>
-    </div>
 
-    <div data-role="panel" id="home_panel" data-position-fixed="true" data-display="push" data-theme="b">
+        <div data-role="content">
+
+            <div class="friend_list">
+                <h1> My activity feed</h1>
+                <ul data-role="listview" data-inset="true">
+                    <li><a href="restaurant.html" data-transition="slide">
+                        <img src="restau01_mini.jpg"/>
+                        <h2><font color="blue">Irene Tan</font> liked your review for <u>Colgate winter mint</u>.</h2>
+                        <p>From Beijing 1 hr ago</p></a>
+                    </li>
+                    <li><a href="restaurant.html" data-transition="slide">
+                        <img src="restau02_mini.jpg"/>
+                        <h2><font color="blue">Jacob Wu</font> posted a question on <u>Aveda shampoo</u>:"What is the difference in dry vs. moisturizing?"</h2>
+                        <p>From Shanghai 3hr ago</p></a>
+                    </li>
+                    <li><a href="restaurant.html" data-transition="slide">
+                        <img src="restau03_mini.jpg"/>
+                        <h2><font color="blue">Lisa Fung</font> commented on your review for <u>Mark Millar BBQ set</u>.</h2>
+                        <p>From Shenzhen 11 hr ago</p></a>
+                    </li>
+                    <li><a href="restaurant.html" data-transition="slide">
+                        <img src="restau04_mini.jpg"/>
+                        <h2><font color="blue">Beibei</font> in Xi'an followed your question for <u>Burtlesbee lip wax</u>.</h2>
+                        <p>From Xi'an 20 hr ago</p></a>
+                    </li>
+                    <li><a href="restaurant.html" data-transition="slide">
+                        <img src="restau05_mini.jpg"/>
+                        <h2><font color="blue">Johnson Ho</font> commented on your question for <u>Kleenex tissue</u>.</h2>
+                        <p>From Tianjin 2 days ago</p></a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div><!-- /page -->
+
+    <div data-role="panel" id="home_panel" data-position="left" data-position-fixed="true" data-display="push" data-theme="b" class="ui-panel ui-panel-position-left ui-panel-display-overlay ui-panel-closed ui-body-a ui-panel-animate">
         <!-- panel content goes here -->
-        <ul data-role="listview">
+        <ul data-role="listview" data-theme="b">
             <li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
-                <li><a href="#panel-fixed-page2">Accordion</a></li>
-                <li><a href="#panel-fixed-page2">Ajax Navigation</a></li>
-                <li><a href="#panel-fixed-page2">Autocomplete</a></li>
-                <li><a href="#panel-fixed-page2">Buttons</a></li>
-                <li><a href="#panel-fixed-page2">Checkboxes</a></li>
+                <li><a href="user_home.html" data-transition="slide">Home</a></li>
+                <li><a href="message.html">Messages</a></li>
+                <li><a href="post.html" data-transition="slide">My Posts</a></li>
+                <li><a href="follow.html">Following</a></li>
+                <li><a href="circle.html">My Circles</a></li>
+                <li><a href="profile.html">My Profile</a></li>
+                <li><a href="setting.html">Settings</a></li>
 
                 <li><button><img src="restau05_mini.jpg">Home</button></li>
                 <li><button><img src="restau04_mini.jpg">Message<span class="ui-li-count">5</span></button></li>
@@ -87,7 +92,8 @@
         </ul>
 
     </div>
-    <div data-role="panel" data-position="right" data-position-fixed="true" data-display="overlay" data-theme="a" id="add-form">
+
+    <div data-role="panel" data-position="right" data-position-fixed="true" data-display="overlay" data-theme="a" id="add-form" class="ui-panel ui-panel-position-right ui-panel-display-reveal ui-panel-closed ui-body-b ui-panel-animate">
         <form class="userform">
             <h2>Login</h2>
             <label for="name">Username:</label>
@@ -101,6 +107,5 @@
         </form>
     </div><!-- /panel -->
 
-</div><!-- /page -->
 </body>
 </html>
