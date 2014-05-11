@@ -12,6 +12,37 @@
     <link rel="stylesheet" href="custom.css" />
     <script src="js/jquery-1.11.0.min.js"></script>
     <script src="js/jquery.mobile-1.4.2.min.js"></script>
+    <script type="text/javascript">
+        $( document ).on( "pagecreate", function() {
+            $( ".photopopup" ).on({
+                popupbeforeposition: function() {
+                    var maxHeight = $( window ).height() - 60 + "px";
+                    $( ".photopopup img" ).css( "max-height", maxHeight );
+                    $( ".photopopup img" ).attr("src","http://files.gamebanana.com/img/ico/sprays/flash_2.png");
+                }
+            });
+        });
+
+        var imageLoader = document.getElementById('imageLoader');
+            imageLoader.addEventListener('change', handleImage, false);
+        var canvas = document.getElementById('imageCanvas');
+        var ctx = canvas.getContext('2d');
+
+
+        function handleImage(e){
+            var reader = new FileReader();
+            reader.onload = function(event){
+                var img = new Image();
+                img.onload = function(){
+                    canvas.width = img.width;
+                    canvas.height = img.height;
+                    ctx.drawImage(img,0,0);
+                }
+                img.src = event.target.result;
+            }
+            reader.readAsDataURL(e.target.files[0]);     
+        }
+    </script>
 </head>
 <body>
 
@@ -22,7 +53,19 @@
             <a href="#home_panel" data-icon="bars" data-iconpos="notext">Menu</a>
             <a href="#add-form" data-icon="gear" data-iconpos="notext">Add</a>
         </div><!-- /header -->
+        <input type="file" accept="image/*;capture=camera" id="imageLoader">
+        <canvas id="imageCanvas"></canvas>
+
+        <a href="#popupPhotoLandscape" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Photo landscape</a>
+
+        <div data-role="popup" id="popupPhotoLandscape" class="photopopup" data-overlay-theme="a" data-corners="false" data-tolerance="30,15">
+            <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="http://files.gamebanana.com/img/ico/sprays/flash_2.png" alt="Photo landscape">
+        </div>
+
+
     </div>
+    
+
 
 
 </body>
