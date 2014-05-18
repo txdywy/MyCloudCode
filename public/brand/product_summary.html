@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Colgate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="jquery.mobile.structure-1.4.2.css" />
+    <link rel="apple-touch-icon" href="images/launch_icon_57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="images/launch_icon_72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="images/launch_icon_114.png" />
+    <link rel="stylesheet" href="jquery.mobile-1.4.2.css" />
+    <link rel="stylesheet" href="custom.css" />
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/jquery.mobile-1.4.2.min.js"></script>
+    <script id="panel-init">
+        $(function() {
+            $( "body>[data-role='panel']" ).panel().enhanceWithin(); //manually init panel for different pages
+        });
+    </script>
+</head>
+
+<body>
+    <div id="product_summary" data-role="page" data-add-back-btn="true">
+
+        <div data-role="header" data-position="fixed">
+            <h1>Colgate</h1>
+            <a href="#home_panel" data-icon="bars" data-iconpos="notext">Menu</a>
+            <a href="#search" data-icon="search" data-iconpos="notext">Search</a>
+        </div><!-- /header -->
+
+        <div data-role="content">
+            <div class="product_detail">
+                <div class="ui-grid-a">
+                    <div class="ui-block-a"><p><img src="restau01.jpg"/></p></div>
+                    <div class="ui-block-b">
+                        <p><h3>Max Fresh Icy Cool Mint</h3></p>
+                        <p><h3>Plus Mini Breath Strips *</h3></p>
+                        <p><strong>Tags:</strong> personal care > toothpaste *</p>
+                        <p>* indicates topics you're currently following</p>
+                    </div>
+                </div><!-- /grid-a -->
+                <div class="product_social">
+                    <a href="" data-role="button" data-inline="true" data-icon="star">Follow</a>
+                    <a href="" data-role="button" data-inline="true" data-icon="grid">Share</a>
+                    <a href="" data-role="button" data-inline="true" data-icon="info">Info</a>
+                </div>
+            </div>
+
+            <hr/>
+
+            <div class="product_qa">
+                <p><h1>Question & Answer</h1></p>
+                <p><b>24</b> questions asked, <b>75%</b> received replies</p>
+                <p><b>42</b> people following this topic, <b>52%</b> are owners</p>
+
+                <p><h2>Popular Questions</h2></p>
+
+                <ul data-role="listview" data-inset="true">
+                    <li>
+                        <img src="greenUp.jpeg"/>
+                        <p><strong>How is this different from icy cool</strong></p>
+                        <p><strong>mint without strips?</strong></p>
+                        <p>From <font color="blue">Nellie L</font> in Tianjin (3 answers)</p>
+                    </li>
+                    <li>
+                        <img src="greenUp.jpeg"/>
+                        <p><strong>Do you prefer Colgate icy cool mint</strong></p>
+                        <p><strong>or Crest fresh wintry mint?</strong></p>
+                        <p>From <font color="blue">Cathy Yu</font> in Beijing (3 answers)</p>
+                    </li>
+                    <li>
+                        <img src="greenUp.jpeg"/>
+                        <p><strong>Do you prefer Colgate icy cool mint</strong></p>
+                        <p><strong>or Crest fresh wintry mint?</strong></p>
+                        <p>From <font color="blue">Spencer Ko</font> in Wuhan (8 answers)</p>
+                    </li>
+                </ul>
+
+                <a href="QA.html" data-role="button" data-inline="true"><strong>View all 24 Q&A</strong></a>
+
+            </div>
+
+            <hr/>
+
+            <div class="product_user_review">
+                <p><h1>User Reviews</h1></p>
+                <p><h2>Overview</h2></p>
+                <p><b>80%</b> positive, <b>53</b> reviews</p>
+                <p><h2>Your demographic</h2></p>
+                <p><b>65%</b> positive, <b>25</b> reviews</p>
+
+                <p><h2>Most liked reviews</h2></p>
+
+                <ul data-role="listview" data-inset="true">
+                    <li>
+                        <img src="restau01_mini.jpg"/>
+                        <p><strong>Nice taste and leaves your breath</strong></p>
+                        <p><strong>tingly. Have tried other</strong></p>
+                        <p><strong>toothpaste, this is the best.</strong></p>
+                        <p><font color="blue">Sarah Ma</font> in Shanghai, 5 weeks ago</p>
+                    </li>
+                    <li>
+                        <img src="restau02_mini.jpg"/>
+                        <p><strong>(Update 2) My teeth still feels</strong></p>
+                        <p><strong>super clean, does good job</strong></p>
+                        <p><strong>removing curry stains.</strong></p>
+                        <p><font color="blue">Jinbao</font> in Beijing, 7 weeks ago</p>
+                        <p>Update of previous review, 8 weeks ago</p>
+                    </li>
+                    <li>
+                        <img src="restau03_mini.jpg"/>
+                        <p><strong>Terrible tasting toothpaste.</strong></p>
+                        <p><strong>or Crest fresh wintry mint?</strong></p>
+                        <p><font color="blue">Bruce Yee</font> in Beijing, 7 weeks ago</p>
+                    </li>
+                </ul>
+
+                <a href="review.html" data-role="button" data-inline="true"><strong>View all 15 reviews</strong></a>
+
+            </div>
+        </div>
+
+        <div data-role="panel" id="search" data-position="right" data-position-fixed="true" data-theme="b"/>
+
+        <div data-role="panel" id="home_panel" data-position="left" data-position-fixed="true" data-display="push" data-theme="b" class="ui-panel ui-panel-position-left ui-panel-display-overlay ui-panel-closed ui-body-a ui-panel-animate">
+            <!-- panel content goes here -->
+            <ul data-role="listview" data-theme="b">
+                <li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+                <li><a href="user_home.html" data-transition="slide">Home</a></li>
+                <li><a href="message.html">Messages</a></li>
+                <li><a href="post.html" data-transition="slide">My Posts</a></li>
+                <li><a href="follow.html">Following</a></li>
+                <li><a href="circle.html">My Circles</a></li>
+                <li><a href="profile.html">My Profile</a></li>
+                <li><a href="setting.html">Settings</a></li>
+
+                <li><button><img src="restau05_mini.jpg">Home</button></li>
+                <li><button><img src="restau04_mini.jpg">Message<span class="ui-li-count">5</span></button></li>
+                <li><button><img src="restau03_mini.jpg">My Posts</button></li>
+                <li><button><img src="restau02_mini.jpg">Following</button></li>
+                <li><button><img src="restau01_mini.jpg">Friends & Circles</button></li>
+                <li><button><img src="restau05_mini.jpg">My Profile</button></li>
+                <li><button><img src="restau04_mini.jpg">Settings</button></li>
+
+            </ul>
+
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Colgate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="jquery.mobile.structure-1.4.2.css" />
+    <link rel="apple-touch-icon" href="images/launch_icon_57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="images/launch_icon_72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="images/launch_icon_114.png" />
+    <link rel="stylesheet" href="jquery.mobile-1.4.2.css" />
+    <link rel="stylesheet" href="custom.css" />
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/jquery.mobile-1.4.2.min.js"></script>
+    <script id="panel-init">
+        $(function() {
+            $( "body>[data-role='panel']" ).panel().enhanceWithin(); //manually init panel for different pages
+        });
+    </script>
+</head>
+
+<body>
+    <div id="review" data-role="page" data-add-back-btn="true">
+
+        <div data-role="header" data-position="fixed">
+            <h1>Reviews</h1>
+            <a href="#back" data-icon="back" data-iconpos="notext">Back</a>
+        </div><!-- /header -->
+
+        <div data-role="content">
+            <div class="review_detail">
+                <p>What users are saying about:</p>
+                <p><strong>Max Fresh Icy Cool Mint Plus Mini Breath Strips</strong></p>
+                <p><a href="" data-role="button" data-inline="true" data-icon="plus" data-iconpos="right">Write review for this product</a></p>
+            </div>
+
+            <div class="most_liked_reviews">
+                <p><h2>Most liked reviews</h2></p><hr/>
+
+                <ul data-role="listview" data-inset="true">
+                    <li>
+                        <img src="restau01_mini.jpg"/>
+                        <p><strong>Nice taste and leaves your breath</strong></p>
+                        <p><strong>tingly. Have tried other</strong></p>
+                        <p><strong>toothpaste, this is the best.</strong></p>
+                        <p><font color="blue">Sarah Ma</font> in Shanghai, 5 weeks ago</p>
+                    </li>
+                    <li>
+                        <img src="restau02_mini.jpg"/>
+                        <p><strong>(Update 2) My teeth still feels</strong></p>
+                        <p><strong>super clean, does good job</strong></p>
+                        <p><strong>removing curry stains.</strong></p>
+                        <p><font color="blue">Jinbao</font> in Beijing, 7 weeks ago</p>
+                        <p>Update of previous review, 8 weeks ago</p>
+                    </li>
+                </ul>
+
+                <a href="" data-role="button" data-inline="true"><strong>Next 5</strong></a>
+            </div>
+
+            <div class="my_friend_circle">
+                <p><h2>My friends & circles</h2></p><hr/>
+
+                <a href="" data-role="button" data-inline="true"><strong>My friends & circles</strong></a>
+
+                <ul data-role="listview" data-inset="true">
+                    <li>
+                        <img src="restau01_mini.jpg"/>
+                        <p><strong>Nice taste and leaves your breath</strong></p>
+                        <p><strong>tingly. Have tried other</strong></p>
+                        <p><strong>toothpaste, this is the best.</strong></p>
+                        <p><font color="blue">Sarah Ma</font> in Shanghai, 5 weeks ago</p>
+                    </li>
+                    <li>
+                        <img src="restau02_mini.jpg"/>
+                        <p><strong>(Update 2) My teeth still feels</strong></p>
+                        <p><strong>super clean, does good job</strong></p>
+                        <p><strong>removing curry stains.</strong></p>
+                        <p><font color="blue">Jinbao</font> in Beijing, 7 weeks ago</p>
+                        <p>Update of previous review, 8 weeks ago</p>
+                    </li>
+                </ul>
+
+                <a href="" data-role="button" data-inline="true"><strong>Next 5</strong></a>
+            </div>
+
+            <div class="from_verified_users">
+                <p><h2>From verified users</h2></p><hr/>
+
+                <ul data-role="listview" data-inset="true">
+                    <li>
+                        <img src="restau01_mini.jpg"/>
+                        <p><strong>Nice taste and leaves your breath</strong></p>
+                        <p><strong>tingly. Have tried other</strong></p>
+                        <p><strong>toothpaste, this is the best.</strong></p>
+                        <p><font color="blue">Sarah Ma</font> in Shanghai, 5 weeks ago</p>
+                    </li>
+                    <li>
+                        <img src="restau02_mini.jpg"/>
+                        <p><strong>(Update 2) My teeth still feels</strong></p>
+                        <p><strong>super clean, does good job</strong></p>
+                        <p><strong>removing curry stains.</strong></p>
+                        <p><font color="blue">Jinbao</font> in Beijing, 7 weeks ago</p>
+                        <p>Update of previous review, 8 weeks ago</p>
+                    </li>
+                </ul>
+
+                <a href="" data-role="button" data-inline="true"><strong>Next 5</strong></a>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
