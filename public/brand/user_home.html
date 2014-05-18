@@ -23,12 +23,18 @@
 <body>
     <div id="user_home" data-role="page" data-add-back-btn="true">
 
-        <img src="images/logo_buychat.png" id="logo_buychat">
+        <div id="logo_buychat">
+            <h1>Buy Chat </h1>
+        </div>
 
         <div data-role="header" data-position="fixed">
             <h1>Home</h1>
             <a href="#home_panel" data-icon="bars" data-iconpos="notext">Menu</a>
-            <a href="#add-form" data-icon="gear" data-iconpos="notext">Add</a>
+            <!--<a href="#add-form" data-icon="gear" data-iconpos="notext">Add</a>-->
+            <a id="userinfo" href="index.html" data-icon="delete" class="ui-btn-right" onclick="logOutBuyChat()" >Log out</a>
+            <script type="text/javascript">
+                $("#userinfo").text("["+Parse.User.current().get("username")+"] Log out");
+            </script> 
         </div><!-- /header -->
 
         <div data-role="content" class="ui-content">
@@ -97,19 +103,35 @@
 
     </div>
 
+    <!--
     <div data-role="panel" data-position="right" data-position-fixed="true" data-display="overlay" data-theme="a" id="add-form" class="ui-panel ui-panel-position-right ui-panel-display-reveal ui-panel-closed ui-body-b ui-panel-animate">
-        <form class="login-form" id="login-form" data-ajax="false" action="search.html">
-            <h2>Login</h2>
+        <form class="login-form" id="login-form" data-ajax="false" action="user_home.html">
+            <h2>Log in</h2>
+            <div class="error" style="display:none"></div>
             <label for="name">Username:</label>
             <input type="text" name="name" id="login-username" value="" data-clear-btn="true" data-mini="true">
             <label for="password">Password:</label>
             <input type="password" name="password" id="login-password" value="" data-clear-btn="true" autocomplete="off" data-mini="true">
             <div class="ui-grid-a">
-                <div class="ui-block-a"><a href="#" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-mini show-page-loading-msg">Cancel</a></div>
+                <div class="ui-block-a"><a href="#" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-mini">Cancel</a></div>
                 <div class="ui-block-b"><a href="#" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-mini show-page-loading-msg" onclick="return logInBuyChat()">Save</a></div>
             </div>
         </form>
-    </div><!-- /panel -->
+
+        <form class="signup-form" id="signup-form" data-ajax="false" action="user_home.html">
+            <h2>Sign up</h2>
+            <div class="error" style="display:none"></div>
+            <label for="name">Username:</label>
+            <input type="text" name="name" id="signup-username" value="" data-clear-btn="true" data-mini="true">
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="signup-password" value="" data-clear-btn="true" autocomplete="off" data-mini="true">
+            <div class="ui-grid-a">
+                <div class="ui-block-a"><a href="#" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-mini">Cancel</a></div>
+                <div class="ui-block-b"><a href="#" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-mini show-page-loading-msg" onclick="return signUpBuyChat()">Save</a></div>
+            </div>
+        </form>
+    </div>-->
+    <!-- /panel -->
 
 </body>
 </html>

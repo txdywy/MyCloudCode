@@ -87,7 +87,7 @@ var signUpBrand = function(e) {
   Parse.User.signUp(username, password, { ACL: new Parse.ACL() }, {
     success: function(user) {
       //delete self;
-      self.$("#login-form").submit();
+      self.$("#signup-form").submit();
       self.$.mobile.loading( "hide" );
     },
 

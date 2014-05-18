@@ -35,7 +35,10 @@
         <div data-role="header" data-position="fixed">
             <h1>Home</h1>
             <a href="#home_panel" data-icon="bars" data-iconpos="notext">Menu</a>
-            <a href="#add-form" data-icon="gear" data-iconpos="notext">Add</a>
+            <a id="userinfo" href="index.html" data-icon="delete" class="ui-btn-right" onclick="logOutBuyChat()" >Log out</a>
+            <script type="text/javascript">
+                $("#userinfo").text("["+Parse.User.current().get("username")+"] Log out");
+            </script> 
         </div><!-- /header -->
         <input type="file" accept="image/*;capture=camera" id="imageLoader">
         <canvas id="imageCanvas"></canvas>

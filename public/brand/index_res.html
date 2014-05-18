@@ -15,7 +15,7 @@
     <script src="js/jquery-1.11.0.min.js"></script>
     <script src="js/jquery.mobile-1.4.2.min.js"></script>
     <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.18.min.js"></script>
-    <script src="js/buychat.js"></script>
+    <script src="js/brand.js"></script>
     <script type="text/javascript">
 
     </script>
@@ -23,27 +23,27 @@
 </head> 
 
 <body> 
-<div data-role="page" id="home" >
+<div data-role="page" id="home" data-theme="c">
 
-    <div data-role="content" >
+    <div data-role="content" data-theme="c">
 
-    <div id="logo_buychat">
-        <h1>Buy Chat </h1>
+    <div id="branding">
+        <h1>Restaurant Picker </h1>
     </div>
 
-    <form class="login-form" id="login-form" data-ajax="false" action="user_home.html">
+    <form class="login-form" id="login-form" data-ajax="false" action="search.html">
       <h2>Log In</h2>
       <div class="error" style="display:none"></div>
       <input type="text" id="login-username" placeholder="Username" />
       <input type="password" id="login-password" placeholder="Password" />
-      <button class="show-page-loading-msg" data-icon="check" onclick="return logInBuyChat()">Log In</button>
+      <button class="show-page-loading-msg" data-icon="check" onclick="return logInBrand()">Log In</button>
     </form>
-    <form class="signup-form" id="signup-form" data-ajax="false" action="user_home.html">
+    <form class="signup-form" id="signup-form" data-ajax="false" action="search.html">
       <h2>Sign Up</h2>
       <div class="error" style="display:none"></div>
       <input type="text" id="signup-username" placeholder="Username" />
       <input type="password" id="signup-password" placeholder="Create a Password" />
-      <button class="show-page-loading-msg" data-icon="grid" onclick="return signUpBuyChat()">Sign Up</button>
+      <button class="show-page-loading-msg" data-icon="grid" onclick="return signUpBrand()">Sign Up</button>
     </form>
 
   </div>

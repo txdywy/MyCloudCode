@@ -66,6 +66,7 @@ var logInBuyChat = function(e) {
       //alert("success");
       self.$("#login-form").submit();
       self.$.mobile.loading( "hide" );
+      self.$("#login-form").style.display = "block";
     },
 
     error: function(user, error) {
@@ -79,7 +80,7 @@ var logInBuyChat = function(e) {
   return false;
 };
 
-var signUpBrand = function(e) {
+var signUpBuyChat = function(e) {
   var self = this;
   var username = this.$("#signup-username").val();
   var password = this.$("#signup-password").val();
@@ -87,8 +88,9 @@ var signUpBrand = function(e) {
   Parse.User.signUp(username, password, { ACL: new Parse.ACL() }, {
     success: function(user) {
       //delete self;
-      self.$("#login-form").submit();
+      self.$("#signup-form").submit();
       self.$.mobile.loading( "hide" );
+      self.$("#signup-form").style.display = "block";
     },
 
     error: function(user, error) {
@@ -103,7 +105,7 @@ var signUpBrand = function(e) {
   return false;
 };
 
-var logOutBrand = function(e) {
+var logOutBuyChat = function(e) {
   Parse.User.logOut();
 };
 
