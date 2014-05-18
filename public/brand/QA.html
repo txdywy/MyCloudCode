@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Colgate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="jquery.mobile.structure-1.4.2.css" />
+    <link rel="apple-touch-icon" href="images/launch_icon_57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="images/launch_icon_72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="images/launch_icon_114.png" />
+    <link rel="stylesheet" href="jquery.mobile-1.4.2.css" />
+    <link rel="stylesheet" href="custom.css" />
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/jquery.mobile-1.4.2.min.js"></script>
+    <script id="panel-init">
+        $(function() {
+            $( "body>[data-role='panel']" ).panel().enhanceWithin(); //manually init panel for different pages
+        });
+    </script>
+</head>
+
+<body>
+    <div id="qa" data-role="page" data-add-back-btn="true">
+
+        <div data-role="header" data-position="fixed">
+            <h1>Q&A</h1>
+            <a href="#back" data-icon="back" data-iconpos="notext">Back</a>
+        </div><!-- /header -->
+
+        <div data-role="content">
+            <div class="question_detail">
+                <form>
+                    <input type="search" name="search-4" id="search_product" placeholder="Search or post new question ..." value="">
+                </form>
+                <p>Questions users are asking about</p>
+                <p><strong>Max Fresh Icy Cool Mint Plus Mini Breath Strips</strong></p>
+            </div>
+
+            <div class = "most_helpful">
+                <p><h2>Most Helpful</h2></p><hr/>
+
+                <ul data-role="listview" data-inset="true">
+                    <li>
+                        <img src="greenUp.jpeg"/>
+                        <p><strong>How is this different from icy cool</strong></p>
+                        <p><strong>mint without strips?</strong></p>
+                        <p>from <font color="blue">Nelson Chan</font> in Tianjin, amateur botanist.</p>
+                        <p>asked 2 month ago</p>
+                    </li>
+                    <li>
+                        <img src="greenUp.jpeg"/>
+                        <p><strong>Do you prefer Colgate icy cool mint</strong></p>
+                        <p><strong>or Crest fresh wintry mint?</strong></p>
+                        <p>from <font color="blue">Morris Bo</font> in Wuhan, amateur botanist.</p>
+                        <p>asked 3 months ago</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class = "recently_answered">
+                <p><h2>Recently answered</h2></p><hr/>
+
+                <ul data-role="listview" data-inset="true">
+                    <li>
+                        <img src="greenUp.jpeg"/>
+                        <p><strong>Do you prefer Colgate icy cool mint</strong></p>
+                        <p><strong>or Crest fresh wintry mint?</strong></p>
+                        <p>from <font color="blue">Morris Bo</font> in Wuhan, amateur botanist.</p>
+                        <p>asked 3 months ago</p>
+                    </li>
+                    <li>
+                        <img src="greenUp.jpeg"/>
+                        <p><strong>How is this different from icy cool</strong></p>
+                        <p><strong>mint without strips?</strong></p>
+                        <p>from <font color="blue">Nelson Chan</font> in Tianjin, amateur botanist.</p>
+                        <p>asked 2 month ago</p>
+                    </li>
+                    <li>
+                        <img src="greenUp.jpeg"/>
+                        <p><strong>Do you prefer Colgate icy cool mint</strong></p>
+                        <p><strong>or Crest fresh wintry mint?</strong></p>
+                        <p>from <font color="blue">Morris Bo</font> in Wuhan, amateur botanist.</p>
+                        <p>asked 3 months ago</p>
+                    </li>
+                </ul>
+                <a href="" data-role="button" data-inline="true"><strong>Next 5</strong></a>
+            </div>
+
+            <div class = "Waiting_for_answers">
+                <p><h2>Waiting for answers</h2></p><hr/>
+
+                <ul data-role="listview" data-inset="true">
+                    <li>
+                        <img src="greenUp.jpeg"/>
+                        <p><strong>Do you prefer Colgate icy cool mint</strong></p>
+                        <p><strong>or Crest fresh wintry mint?</strong></p>
+                        <p>from <font color="blue">Morris Bo</font> in Wuhan, amateur botanist.</p>
+                        <p>asked 3 months ago</p>
+                    </li>
+                    <li>
+                        <img src="greenUp.jpeg"/>
+                        <p><strong>How is this different from icy cool</strong></p>
+                        <p><strong>mint without strips?</strong></p>
+                        <p>from <font color="blue">Nelson Chan</font> in Tianjin, amateur botanist.</p>
+                        <p>asked 2 month ago</p>
+                    </li>
+                    <li>
+                        <img src="greenUp.jpeg"/>
+                        <p><strong>Do you prefer Colgate icy cool mint</strong></p>
+                        <p><strong>or Crest fresh wintry mint?</strong></p>
+                        <p>from <font color="blue">Morris Bo</font> in Wuhan, amateur botanist.</p>
+                        <p>asked 3 months ago</p>
+                    </li>
+                </ul>
+                <a href="" data-role="button" data-inline="true"><strong>Next 5</strong></a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div data-role="panel" id="back" data-position="left" data-position-fixed="true" data-theme="b"/>
+
+</body>
+</html>
