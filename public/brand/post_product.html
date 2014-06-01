@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Post Product</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="jquery.mobile.structure-1.4.2.css" />
+    <link rel="apple-touch-icon" href="images/launch_icon_57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="images/launch_icon_72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="images/launch_icon_114.png" />
+    <link rel="stylesheet" href="jquery.mobile-1.4.2.css" />
+    <link rel="stylesheet" href="custom.css" />
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/jquery.mobile-1.4.2.min.js"></script>
+    <script id="panel-init">
+        $(function() {
+            $( "body>[data-role='panel']" ).panel().enhanceWithin(); //manually init panel for different pages
+        });
+    </script>
+</head>
+<body>
+    <div id="post_product" data-role="page">
+        <div data-role="header" data-position="fixed">
+            <h1>Post product</h1>
+            <a href="#cancel">Cancel</a>
+        </div><!-- /header -->
+
+        <div data-role="content">
+            <div class="product_photo">
+                <ul data-role="listview" data-inset="true">
+                    <li>
+                        <img src="restau01_mini.jpg"/>
+                        <p><strong>Product photp</strong></p>
+                        <p>None, tap to upload</p>
+                        <p><font color="gray">* indicate required field</font></p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class = "Product_brand_name">
+                <p><h2>Product brand and name</h2></p><hr/>
+                <p><font color="gray">Tyoe in name ...</font></p>
+                <p><font color="gray">(e.g. Colgate max fresh icy cool mint)</font></p>
+
+                <ul data-role="listview" data-inset="true">
+                    <li>
+                        <p><strong>Product Tag</strong></p>
+                        <p>from <font color="gray">None, tap to add</font></p>
+                    </li>
+                    <li>
+                        <p><strong>Helpful links</strong></p>
+                        <p>from <font color="gray">For finding more info about product</font></p>
+                    </li>
+                    <li>
+                        <p><strong>Include a review?</strong></p>
+                        <p>from <font color="gray">Tag to add</font> in Wuhan, amateur botanist.</p>
+                    </li>
+                </ul>
+            </div>
+
+
+            <a href="" data-role="button" data-inline="true"><strong>Preview & Submit</strong></a>
+
+        </div>
+
+
+    </div>
+    <div data-role="panel" id="cancel" data-position="right" data-theme="b"/>
+</body>
+</html>

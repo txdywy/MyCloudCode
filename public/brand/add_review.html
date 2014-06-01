@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Add review</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="jquery.mobile.structure-1.4.2.css" />
+    <link rel="apple-touch-icon" href="images/launch_icon_57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="images/launch_icon_72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="images/launch_icon_114.png" />
+    <link rel="stylesheet" href="jquery.mobile-1.4.2.css" />
+    <link rel="stylesheet" href="custom.css" />
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/jquery.mobile-1.4.2.min.js"></script>
+    <script id="panel-init">
+        $(function() {
+            $( "body>[data-role='panel']" ).panel().enhanceWithin(); //manually init panel for different pages
+        });
+    </script>
+</head>
+<body>
+<div id="post_product" data-role="page">
+    <div data-role="header" data-position="fixed">
+        <h1>Post question</h1>
+        <a href="#cancel">Cancel</a>
+    </div><!-- /header -->
+
+    <div data-role="content">
+        <div class="review_note">
+            <p><font color="gray">Add new review for</font></p>
+            <p><strong>Max Fresh Icy Cool Mint Plus Mini Breath Strips</strong></strong></p>
+        </div>
+
+        <div class="user_info">
+            <ul data-role="listview" data-inset="true">
+                <li>
+                    <img src="restau01_mini.jpg"/>
+                    <p><strong>Daniel Lee</strong></p>
+                    <p>Amateur botanist edit</p>
+                    <p><font color="gray">Location Beijing</font></p>
+                </li>
+            </ul>
+        </div>
+
+        <div class = "my_rating">
+            <label for="textarea">My rating (required, select one)</label>
+        </div>
+
+        <div class = "comments">
+            <label for="textarea">Comments (optional)</label>
+            <textarea cols="40" rows="8" name="textarea" id="textarea">Add comments to encourage discussion within your network!</textarea>
+            <p>Attachments add</p>
+        </div>
+    </div>
+
+    <a href="" data-role="button" data-inline="true"><strong>Preview Post</strong></a>
+
+
+</div>
+
+
+</body>
+</html>
